@@ -1,14 +1,20 @@
-<h1>lista de Snippets</h1>
-<p>
-<%= link_to "Nuevo", new_snippet_path %>
-</p>
+<% content_for :title do %> Snippets <% end %>
 
-<% @snippets.each do |s| %>
-  <article>
-  <p>
-  <strong>Titulo: </strong> <%= s.title.capitalize %><br />
-  <strong>Lenguaje: </strong> <%= s.lang.capitalize %>
-  <span><%= link_to "Mostrar", s %></span>
-  </p>
-  </article>
-<% end %>
+<section>
+  <div class="column">
+    <h1>lista de Snippets</h1>
+    <p>
+    <%= link_to "Nuevo", new_snippet_path %>
+    </p>
+
+    <div class="column">
+    <% @snippets.each do |s| %>
+      <p>
+      <strong>Titulo: </strong> <%= s.title.capitalize %><br />
+      <strong>Lenguaje: </strong> <%= s.lang.capitalize %>
+    <span><%= link_to "Mostrar", s %></span>
+      </p>
+  <% end %>
+  </div>
+  </div>
+</section>

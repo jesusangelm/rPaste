@@ -7,7 +7,7 @@ class SnippetsController < ApplicationController
   def create
     @snippet = Snippet.new(snippet_params)
     if @snippet.save
-      redirect_to @snippet
+      redirect_to @snippet, notice: "Snippet creado!"
     else
       render :new
     end

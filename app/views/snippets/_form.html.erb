@@ -1,7 +1,8 @@
 <%= simple_form_for @snippet do |f| %>
   <%= f.error_notification %>
-  <%= f.input :title %>
-  <%= f.input :lang %>
-  <%= f.input :code %>
+  <%= f.input :title, label: "Titulo" %>
+  <%= f.input :lang, label: "Lenguaje", as: :select,
+              collection: lexer_list %>
+  <%= f.input :code, label: "Codigo" %>
   <%= f.button :submit, "Crear Paste" %>
 <% end %>

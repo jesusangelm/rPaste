@@ -2,19 +2,22 @@
 
 <section>
   <div class="column">
-    <h1>lista de Snippets</h1>
+    <h1>Lista de Snippets</h1>
     <p>
     <%= link_to "Nuevo", new_snippet_path %>
     </p>
 
     <div class="column">
-    <% @snippets.each do |s| %>
-      <p>
+      <% @snippets.each do |s| %>
+        <p>
       <strong>Titulo: </strong> <%= s.title.capitalize %><br />
       <strong>Lenguaje: </strong> <%= s.lang.capitalize %>
-    <span><%= link_to "Mostrar", s %></span>
+    <span><%= link_to "Mostrar", s %> |
+        <%= link_to "Eliminar", s, method: :delete,
+        data: { confirm: "Seguro?" } %>
+    </span>
       </p>
-  <% end %>
-  </div>
+    <% end %>
+    </div>
   </div>
 </section>

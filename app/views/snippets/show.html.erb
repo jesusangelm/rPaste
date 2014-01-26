@@ -2,8 +2,9 @@
 <h1>Snippet</h1>
 
 <p>
-<%= link_to "Editar", edit_snippet_path(@snippet) %> |
-<%= link_to "Atras", root_path %>
+<%= link_to "Eliminar", @snipper, method: :delete,
+        data: { confirm: "Seguro?" } %> |
+<%= link_to "Inicio", root_path %>
 </p>
 
 <p>

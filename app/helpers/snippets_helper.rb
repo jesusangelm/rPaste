@@ -7,6 +7,6 @@ module SnippetsHelper
     ugly_list.each do |lang|
       supported_langs << lang.to_s.split("::")[2].downcase
     end
-    supported_langs
+    supported_langs - ["literatecoffeescript", "literatehaskell"]
   end
 end

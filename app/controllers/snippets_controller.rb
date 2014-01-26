@@ -24,7 +24,7 @@ class SnippetsController < ApplicationController
   def destroy
     @snippet = Snippet.find(params[:id])
     @snippet.destroy
-    redirect_to snippets_path, notice: "Snippet eliminado!"
+    redirect_to root_path, notice: "Snippet eliminado!"
   end
 
   private

@@ -1,5 +1,5 @@
 Rpaste::Application.routes.draw do
   resources :snippets
 
-  root to: "snippets#index"
+  root to: "snippets#new"
 end
